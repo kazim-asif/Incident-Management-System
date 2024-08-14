@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RootScreenController">
+	
+	<VBox alignment="CENTER" layoutX="72.0" layoutY="72.0" spacing="10">
+   		<Label style="-fx-background-color: green;" text="What mode you want to in" textFill="#d1154e">
+         <font>
+            <Font name="Viner Hand ITC" size="21.0" />
+         </font>
+      </Label>
+		
+		<HBox alignment="CENTER" spacing="10">
+			<Button fx:id="incidentButton" onAction="#handleIncidentButton" style="-fx-background-color: red;" text="Incident">
+            <font>
+               <Font size="14.0" />
+            </font></Button>
+      			<Button fx:id="incidentAdminButton" onAction="#handleIncidentAdminButton" style="-fx-background-color: red;" text="Incident Admin">
+            <font>
+               <Font size="14.0" />
+            </font></Button>
+		</HBox>
+		
+		<Label fx:id="errorLabel" text="" />
+	</VBox>
+   <Label layoutX="173.0" layoutY="21.0" prefHeight="27.0" prefWidth="59.0" style="-fx-background-color: green;" text="Menu" textFill="#d1154e">
+      <font>
+         <Font name="Viner Hand ITC" size="21.0" />
+      </font></Label>
+   <effect>
+      <Lighting>
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+         <light>
+            <Light.Distant />
+         </light>
+      </Lighting>
+   </effect>
+	
+</AnchorPane>

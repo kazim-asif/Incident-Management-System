@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="476.0" prefWidth="817.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AssignResourceController">
+
+    <Label layoutX="102.0" layoutY="14.0" style="-fx-background-color: green;" text="Incidents" />
+    <TextArea fx:id="incidentarea" editable="false" layoutX="15.0" layoutY="34.0" prefHeight="150.0" prefWidth="250.0" style="-fx-border-color: red; -fx-background-color: pink;" />
+
+    <Label layoutX="652.0" layoutY="14.0" style="-fx-background-color: green;" text="Resources" />
+
+    <Label layoutX="14.0" layoutY="200.0" style="-fx-background-color: green;" text="Incident No." />
+    <TextField fx:id="incidentNoTextField" layoutX="14.0" layoutY="220.0" prefWidth="100.0" style="-fx-border-color: red; -fx-background-color: pink;" />
+
+    <Label layoutX="140.0" layoutY="200.0" style="-fx-background-color: green;" text="Firestation No." />
+    <TextField fx:id="firestationNoTextField" layoutX="140.0" layoutY="220.0" prefWidth="100.0" style="-fx-border-color: red; -fx-background-color: pink;" />
+
+    <Label layoutX="350.0" layoutY="249.0" style="-fx-background-color: green;" text="Selected Resources" />
+   <TextArea fx:id="resourcesarea" editable="false" layoutX="554.0" layoutY="34.0" prefHeight="150.0" prefWidth="250.0" style="-fx-border-color: red; -fx-background-color: pink;" />
+   <Button layoutX="34.0" layoutY="435.0" onAction="#handleGoBack" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: red;" text="Go Back" />
+   <TextArea fx:id="selectedresourcesarea" editable="false" layoutX="284.0" layoutY="272.0" prefHeight="150.0" prefWidth="250.0" style="-fx-border-color: red; -fx-background-color: pink;" />
+   <Button layoutX="369.0" layoutY="196.0" onAction="#handleRefresh" prefWidth="80.0" style="-fx-background-color: red;" text="Refresh" />
+   <Button layoutX="624.0" layoutY="432.0" onAction="#handleGetReport" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: red;" text="Get Incident Report" />
+   <Button layoutX="611.0" layoutY="196.0" onAction="#handleCreateResource" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: red;" text="Create New Resource" />
+   <Label layoutX="378.0" layoutY="14.0" style="-fx-background-color: green;" text="Firestations" />
+   <TextArea fx:id="firestationarea" editable="false" layoutX="284.0" layoutY="34.0" prefHeight="150.0" prefWidth="250.0" style="-fx-border-color: red; -fx-background-color: pink;" />
+   <Label layoutX="26.0" layoutY="342.0" style="-fx-background-color: green;" text="No. of Resources" />
+   <TextField fx:id="numResourcesTextField" layoutX="127.0" layoutY="338.0" prefWidth="100.0" style="-fx-border-color: red; -fx-background-color: pink;" />
+   <Button layoutX="324.0" layoutY="435.0" onAction="#allocateResources" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: red;" text="Allocate Selected Resources" />
+   <Label layoutX="26.0" layoutY="297.0" style="-fx-background-color: green;" text="Resource ID" />
+   <TextField fx:id="idfield" layoutX="127.0" layoutY="293.0" prefWidth="100.0" style="-fx-border-color: red; -fx-background-color: pink;" />
+   <Button layoutX="87.0" layoutY="377.0" onAction="#handleAddResource" prefWidth="80.0" style="-fx-background-color: red;" text="Add" />
+   <effect>
+      <Lighting>
+         <bumpInput>
+            <Shadow />
+         </bumpInput>
+         <light>
+            <Light.Distant />
+         </light>
+      </Lighting>
+   </effect>
+</AnchorPane>
